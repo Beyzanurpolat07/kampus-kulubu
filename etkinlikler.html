@@ -1,22 +1,90 @@
-<!doctype html>
-<html lang="tr">
+<!DOCTYPE html><html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Etkinlikler | Kampüs Kulübü</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etkinlikler | Kampüs Kulübü</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-<header><div class="brand">Kampüs Kulübü</div><nav aria-label="Ana menü"><a href="index.html">Ana Sayfa</a>
-<a href="etkinlikler.html" aria-current="page">Etkinlikler</a>
-<a href="hakkimizda.html">Hakkımızda</a></nav></header>
-<main><p class="eyebrow">KAMPÜS KULÜBÜ</p><h1>Etkinlik takvimi</h1>
-<p class="intro">İlk projen için üç buluşma. Aşağıdaki kayıtlar eğitim amacıyla hazırlanmış örnek verilerdir.</p>
-<section class="grid" aria-label="Örnek etkinlikler">
-<article><p class="meta">12 KASIM / 14.00</p><h2>HTML Atölyesi</h2><p>Başlık, paragraf ve linklerle ilk sayfanı oluştur.</p><p>Yer: Bilgisayar Laboratuvarı</p></article>
-<article><p class="meta">19 KASIM / 14.00</p><h2>CSS Tasarım Saati</h2><p>Renkleri, boşlukları ve sayfa düzenini keşfet.</p><p>Yer: Bilgisayar Laboratuvarı</p></article>
-<article><p class="meta">26 KASIM / 14.00</p><h2>Copilot ile Kod Okuma</h2><p>Kodunu açıklat, küçük bir değişiklik yap ve sonucu dene.</p><p>Yer: Çevrim içi buluşma</p></article>
-</section><p class="note">Bu sayfa statiktir. Etkinlik eklemek için HTML dosyasını düzenleriz.</p></main>
-<footer>BPR201 - İnternet Tabanlı Programlama / Eğitim amaçlı örnek proje</footer>
+    <header>
+        <nav class="navbar">
+            <a class="logo" href="index.html">Kampüs Kulübü</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="etkinlikler.html">Etkinlikler</a></li>
+                <li><a href="hakkimizda.html">Hakkımızda</a></li>
+            </ul>
+        </nav>
+    </header><main>
+    <section class="hero">
+        <p class="eyebrow">Takvimini Hazırla</p>
+        <h1>Kampüs Etkinlikleri</h1>
+        <p>İlgi alanına uygun etkinlikleri keşfet ve kampüs hayatına katıl.</p>
+    </section>
+
+    <section class="events-section">
+        <h2>Yaklaşan Etkinlikler</h2>
+
+        <div class="search-area">
+            <label for="eventSearch">Etkinlik ara:</label>
+            <input
+                type="search"
+                id="eventSearch"
+                placeholder="Örneğin: yazılım, müzik..."
+                autocomplete="off"
+            >
+            <button type="button" id="clearSearch" class="button">
+                Aramayı Temizle
+            </button>
+        </div>
+
+        <p id="resultCount" aria-live="polite">5 etkinlik gösteriliyor.</p>
+
+        <div class="card-grid" id="eventList">
+            <article class="card event-card">
+                <h3>Yazılım Geliştirme Atölyesi</h3>
+                <p><strong>Tarih:</strong> 5 Kasım 2026</p>
+                <p><strong>Yer:</strong> Bilgisayar Laboratuvarı</p>
+                <p>Web geliştirme dünyasını keşfet ve temel kodlama becerilerini geliştir.</p>
+            </article>
+
+            <article class="card event-card">
+                <h3>Kampüs Film Gecesi</h3>
+                <p><strong>Tarih:</strong> 8 Kasım 2026</p>
+                <p><strong>Yer:</strong> Öğrenci Merkezi</p>
+                <p>Arkadaşlarınla film izle ve keyifli bir akşam geçir.</p>
+            </article>
+
+            <article class="card event-card">
+                <h3>Kariyer ve Staj Buluşması</h3>
+                <p><strong>Tarih:</strong> 12 Kasım 2026</p>
+                <p><strong>Yer:</strong> Konferans Salonu</p>
+                <p>İş hayatını tanı, kariyer fırsatlarını öğren ve sorularını sor.</p>
+            </article>
+
+            <article class="card event-card">
+                <h3>Fotoğrafçılık Gezisi</h3>
+                <p><strong>Tarih:</strong> 15 Kasım 2026</p>
+                <p><strong>Yer:</strong> Kampüs Bahçesi</p>
+                <p>Fotoğraf çekme tekniklerini öğren ve kampüsü farklı bir gözle keşfet.</p>
+            </article>
+
+            <article class="card event-card">
+                <h3>Müzik ve Bahar Buluşması</h3>
+                <p><strong>Tarih:</strong> 20 Kasım 2026</p>
+                <p><strong>Yer:</strong> Açık Hava Sahnesi</p>
+                <p>Müzik dinle, yeni arkadaşlarla tanış ve öğrenci topluluklarını keşfet.</p>
+            </article>
+        </div>
+
+        <p id="noResults" hidden>Aramanla eşleşen etkinlik bulunamadı.</p>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2026 Kampüs Kulübü | Öğrenci Projesi</p>
+</footer>
+
 </body>
 </html>
